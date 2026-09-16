@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunrise Tree Service | Bakersfield, CA Tree Care</title>
+<meta name="description" content="Licensed & insured tree service in Bakersfield, CA and surrounding Kern County. Tree removal, trimming, stump grinding, storm cleanup, and more.">
+<link rel="icon" href="assets/logo.png">
+
+<!--
+  ============================================================
+  SITE CONFIG — edit these values to re-skin this mockup.
+  ============================================================
+  1. Colors:   see the CSS custom properties in :root below.
+  2. Content:  see the CONFIG object in the <script> at the
+               bottom of <body> — company name, city, phone
+               numbers, logo path, and license number all
+               live there in one place.
+  ============================================================
+-->
+
+<style>
+  :root {
+    /* ---- Brand color scheme (swap these to re-skin) ---- */
+    --forest: #1F3D2E;      /* primary — canopy, wordmark, headings */
+    --forest-dark: #162C21; /* darker shade for hover/depth */
+    --bark: #6B4423;        /* primary — trunk, subtext accents */
+    --sage: #7A9B82;        /* tint — hover states, accents */
+    --tan: #BC8A55;         /* tint — highlights, secondary buttons */
+    --cream: #FAF7F0;       /* neutral — backgrounds */
+    --charcoal: #33291F;    /* neutral — body text */
+    --white: #FFFFFF;
+
+    --font-heading: Georgia, 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    --max-width: 1180px;
+    --radius: 10px;
+    --shadow: 0 4px 20px rgba(31, 61, 46, 0.12);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--charcoal);
+    background: var(--cream);
+    line-height: 1.6;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--font-heading); color: var(--forest); margin: 0 0 0.5em; line-height: 1.2; }
+  .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+  section { padding: 72px 0; }
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--bark);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+  .section-head p { color: #5a4d3f; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--forest); color: var(--white); }
+  .btn-primary:hover { background: var(--forest-dark); box-shadow: var(--shadow); }
+  .btn-accent { background: var(--tan); color: var(--white); }
+  .btn-accent:hover { background: var(--bark); box-shadow: var(--shadow); }
+  .btn-outline { background: transparent; color: var(--white); border-color: var(--white); }
+  .btn-outline:hover { background: rgba(255,255,255,0.15); }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+  /* ---------- Skip link ---------- */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--forest);
+    color: var(--white);
+    padding: 12px 20px;
+    z-index: 1000;
+  }
+  .skip-link:focus { left: 12px; top: 12px; }
+
+  /* ---------- Header ---------- */
+  header.site-header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; flex: 1 1 auto; min-width: 0; overflow: hidden; }
+  .brand img { height: 48px; width: auto; flex-shrink: 0; }
+  .brand-text { line-height: 1.15; min-width: 0; overflow: hidden; }
+  .brand-text .name { font-family: var(--font-heading); font-weight: 700; color: var(--forest); font-size: 1.15rem; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brand-text .tagline { font-size: 0.7rem; color: var(--bark); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+
+  nav.main-nav { display: flex; align-items: center; gap: 28px; }
+  nav.main-nav a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--charcoal);
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  nav.main-nav a:hover { color: var(--forest); border-bottom-color: var(--sage); }
+
+  .header-cta { flex-shrink: 0; display: flex; }
+  .ai-btn {
+    background: var(--forest);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 3px 12px rgba(31,61,46,0.25);
+    animation: pulse-glow 2.4s ease-in-out infinite;
+  }
+  .ai-btn:hover { background: var(--forest-dark); }
+  .ai-btn svg { width: 18px; height: 18px; }
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 3px 12px rgba(31,61,46,0.25); }
+    50% { box-shadow: 0 3px 20px rgba(122,155,130,0.55); }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--forest);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    color: var(--white);
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(22,44,33,0.82), rgba(22,44,33,0.65)), url('assets/hero.png') center 30% / cover no-repeat;
+  }
+  .hero-content { max-width: 680px; }
+  .hero-content .section-label { color: var(--tan); }
+  .hero h1 { color: var(--white); font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 18px; }
+  .hero p.lead { font-size: 1.15rem; color: #EFEAE0; max-width: 560px; margin-bottom: 30px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
+  .trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+  }
+  .trust-badge { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; font-weight: 600; color: #EFEAE0; }
+  .trust-badge svg { width: 20px; height: 20px; color: var(--tan); flex-shrink: 0; }
+
+  /* ---------- License strip ---------- */
+  .license-strip {
+    background: var(--bark);
+    color: var(--white);
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--sage);
+  }
+  .service-card .icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .service-card svg { width: 26px; height: 26px; color: var(--forest); }
+  .service-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .service-card p { font-size: 0.94rem; color: #5a4d3f; margin: 0; }
+
+  /* ---------- Why choose us ---------- */
+  .why-section { background: var(--forest); color: var(--white); }
+  .why-section .section-head p { color: #CFE0D5; }
+  .why-section .section-label { color: var(--tan); }
+  .why-section h2 { color: var(--white); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+  }
+  .why-item { display: flex; gap: 16px; }
+  .why-item .icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .why-item svg { width: 24px; height: 24px; color: var(--tan); }
+  .why-item h3 { color: var(--white); font-size: 1.05rem; margin-bottom: 4px; }
+  .why-item p { margin: 0; font-size: 0.92rem; color: #CFE0D5; }
+
+  /* ---------- Reviews ---------- */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .review-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .stars { color: var(--tan); font-size: 1rem; letter-spacing: 2px; }
+  .review-card p.quote { font-size: 0.95rem; color: var(--charcoal); margin: 0; flex-grow: 1; }
+  .reviewer { display: flex; align-items: center; gap: 10px; margin-top: 4px; }
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  .reviewer .name { font-weight: 700; font-size: 0.9rem; color: var(--forest); }
+  .reviewer .loc { font-size: 0.78rem; color: #7a6a56; }
+  .review-badge {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--cream);
+    color: var(--bark);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .reviews-note { text-align: center; margin-top: 16px; font-size: 0.85rem; color: #7a6a56; font-style: italic; }
+
+  /* ---------- Process ---------- */
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    counter-reset: step;
+  }
+  .process-step { text-align: center; position: relative; }
+  .process-step .num {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+  .process-step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+  .process-step p { font-size: 0.9rem; color: #5a4d3f; margin: 0; }
+
+  /* ---------- Service area ---------- */
+  .area-section { background: var(--sage); color: var(--forest-dark); }
+  .area-section .section-label { color: var(--forest-dark); }
+  .area-section h2 { color: var(--forest-dark); }
+  .area-section .section-head p { color: #1F3D2E; }
+  .area-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+  .area-list li {
+    background: var(--white);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .area-map-note { text-align: center; font-size: 0.9rem; color: var(--forest-dark); }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .gallery-item {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    aspect-ratio: 4 / 3;
+  }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
+  .gallery-item:hover img { transform: scale(1.06); }
+  .gallery-caption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 14px 16px 12px;
+    background: linear-gradient(transparent, rgba(22,44,33,0.85));
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  /* ---------- Contact / CTA ---------- */
+  .contact-section {
+    background: var(--forest);
+    color: var(--white);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact-section h2 { color: var(--white); }
+  .contact-section .section-head { text-align: left; margin: 0 0 24px; max-width: 100%; }
+  .contact-section .section-head p { color: #CFE0D5; }
+  .contact-section .section-label { color: var(--tan); }
+  .contact-info-list { list-style: none; padding: 0; margin: 0 0 28px; display: flex; flex-direction: column; gap: 16px; }
+  .contact-info-list li { display: flex; align-items: center; gap: 12px; font-size: 0.98rem; }
+  .contact-info-list svg { width: 22px; height: 22px; color: var(--tan); flex-shrink: 0; }
+  .contact-form {
+    background: var(--white);
+    color: var(--charcoal);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .contact-form h3 { margin-bottom: 6px; }
+  .contact-form .form-note { font-size: 0.82rem; color: #7a6a56; margin-bottom: 18px; }
+  .contact-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-top: 14px;
+    color: var(--forest);
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d8cfc0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: var(--cream);
+  }
+  .contact-form textarea { resize: vertical; min-height: 80px; }
+  .contact-form button { margin-top: 20px; width: 100%; justify-content: center; }
+
+  /* ---------- Social rail ---------- */
+  .social-rail {
+    position: fixed;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 90;
+  }
+  .social-rail a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .social-rail a:hover { background: var(--tan); transform: scale(1.08); }
+  .social-rail svg { width: 19px; height: 19px; }
+
+  /* ---------- Footer ---------- */
+  footer.site-footer {
+    background: var(--white);
+    text-align: center;
+    padding: 28px 24px;
+    border-top: 1px solid #ece4d6;
+  }
+  .footer-platform {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #7a6a56;
+    font-weight: 600;
+  }
+  .footer-platform img { height: 24px; width: 24px; }
+  .footer-copy { margin-top: 10px; font-size: 0.78rem; color: #a99d8a; }
+
+  /* ---------- Responsive ---------- */
+  /* Extra left clearance below this width so the fixed social rail never
+     overlaps section content (above it, .container is centered with room
+     to spare). */
+  @media (max-width: 1250px) {
+    .container { padding-left: 64px; }
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 820px) {
+    nav.main-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      transition: max-height 0.25s ease;
+    }
+    nav.main-nav.open { max-height: 400px; }
+    nav.main-nav a {
+      padding: 16px 24px;
+      border-bottom: 1px solid #f0ebe0;
+      border-radius: 0;
+    }
+    nav.main-nav a:hover { background: var(--cream); }
+    .hamburger { display: flex; }
+    .header-cta .ai-btn span.long { display: none; }
+    .header-cta .ai-btn { padding: 12px 16px; }
+    .social-rail { left: 8px; gap: 8px; }
+    .social-rail a { width: 34px; height: 34px; }
+    .social-rail svg { width: 16px; height: 16px; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 56px 0; }
+    .hero { min-height: 480px; }
+    .brand-text .tagline { display: none; }
+    .header-inner { padding: 12px 16px; gap: 8px; }
+    .brand { gap: 8px; }
+    .brand img { height: 38px; }
+    .brand-text .name { font-size: 1rem; }
+  }
+
+  @media (max-width: 380px) {
+    .brand-text { display: none; }
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ============ SOCIAL RAIL (fixed left) ============ -->
+<div class="social-rail" aria-label="Social media links">
+  <a href="#" aria-label="Facebook" title="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.5-3H13.5V8.5c0-.9.25-1.5 1.55-1.5H16.5V4.3c-.28-.04-1.23-.12-2.34-.12-2.32 0-3.91 1.42-3.91 4.02V10.5H8v3h2.25V21h3.25z"/></svg>
+  </a>
+  <a href="#" aria-label="Instagram" title="Instagram">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53C6.09.28 6.82.11 7.88.06 8.94.01 9.28 0 12 0zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.25A3.25 3.25 0 1 1 12 8.5a3.25 3.25 0 0 1 0 6.75zm5.15-8.9a1.17 1.17 0 1 1-2.34 0 1.17 1.17 0 0 1 2.34 0z" transform="translate(0 2)"/></svg>
+  </a>
+  <a href="#" aria-label="TikTok" title="TikTok">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2h-3v13.2a2.7 2.7 0 1 1-2.1-2.63V9.5a5.7 5.7 0 1 0 5.1 5.67V8.9a6.6 6.6 0 0 0 3.9 1.27V7.2a3.6 3.6 0 0 1-3.9-3.6V2z"/></svg>
+  </a>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="Sunrise Tree Service home">
+      <img src="assets/logo.png" alt="Sunrise Tree Service logo" id="cfg-logo">
+      <span class="brand-text">
+        <span class="name" id="cfg-company-name">Sunrise Tree Service</span>
+        <span class="tagline">Growing a Brighter Tomorrow</span>
+      </span>
+    </a>
+
+    <button class="hamburger" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#gallery">Gallery</a>
+      <a href="#" onclick="event.preventDefault()">Blog</a>
+      <a href="#" onclick="event.preventDefault()">Reviews</a>
+      <a href="#" onclick="event.preventDefault()">About</a>
+      <a href="#" onclick="event.preventDefault()">Contact</a>
+    </nav>
+
+    <div class="header-cta">
+      <a class="ai-btn" href="tel:17372496115" aria-label="Call to try the voice AI agent demo, 1 7 3 7 2 4 9 6 1 1 5">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="long">Try Your Voice AI Agent</span><span class="short" style="display:none;">Call AI Agent</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="container">
+      <div class="hero-content">
+        <span class="section-label">Bakersfield, CA &amp; Surrounding Areas</span>
+        <h1>Tree Care Bakersfield Trusts, Answered the Moment You Call</h1>
+        <p class="lead">From storm cleanup to stump grinding, our local crews handle it right the first time — and our AI-powered phone line means you never get a busy signal or voicemail.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-accent" href="tel:17372496115">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Talk to Our AI Agent Now
+          </a>
+          <a class="btn btn-outline" href="#contact">Get a Free Estimate</a>
+        </div>
+        <div class="trust-badges">
+          <span class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg>
+            Licensed &amp; Insured
+          </span>
+          <span class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            24/7 Emergency Response
+          </span>
+          <span class="trust-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            5-Star Rated Locally
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LICENSE STRIP ============ -->
+  <div class="license-strip">
+    Licensed &amp; Insured | Lic #TREE-000000 &nbsp;·&nbsp; Free Estimates &nbsp;·&nbsp; Serving Bakersfield &amp; Kern County
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">What We Do</span>
+        <h2 id="services-heading">Full-Service Tree Care</h2>
+        <p>Whatever your trees need, our Bakersfield crews show up on time and get it done clean.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 20h4V10L4 4 2 6l6 6"/><path d="M14 20h4v-6l6-6-2-2-6 6"/></svg>
+          </div>
+          <h3>Tree Removal</h3>
+          <p>Safe, complete removal of hazardous, dead, or unwanted trees of any size.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h12"/></svg>
+          </div>
+          <h3>Tree Trimming &amp; Pruning</h3>
+          <p>Shape, thin, and health-prune your trees to keep them strong and looking sharp.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+          </div>
+          <h3>Stump Grinding</h3>
+          <p>Grind stumps below grade so you can reclaim the yard — no eyesores, no tripping hazards.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 19H2L12 2l4 7h4z"/></svg>
+          </div>
+          <h3>Emergency Storm Cleanup</h3>
+          <p>Fast response for downed limbs and storm-damaged trees when you need it most.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Lot &amp; Land Clearing</h3>
+          <p>Clear overgrown lots and land for new construction, agriculture, or fire prevention.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22V12M12 12c0-4-3-6-7-6 0 4 3 6 7 6zm0 0c0-5 3-8 7-8 0 5-3 8-7 8z"/></svg>
+          </div>
+          <h3>Tree Planting</h3>
+          <p>Species selection and planting suited to Kern County soil and climate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="why-section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Why Bakersfield Chooses Us</span>
+        <h2 id="why-heading">Built for Homeowners Who Are Done Waiting</h2>
+        <p>Modern tools, old-school work ethic.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <h3>Phone Answered First Ring</h3>
+            <p>Our AI-powered line picks up 24/7 — no voicemail, no phone tag, ever.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div>
+            <h3>Licensed &amp; Insured</h3>
+            <p>Fully licensed and insured for your protection on every job, every time.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 18h6"/></svg>
+          </div>
+          <div>
+            <h3>Text Updates Before Every Visit</h3>
+            <p>Know exactly when we're on the way — no guessing, no waiting around all day.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/></svg>
+          </div>
+          <div>
+            <h3>Digital Invoices</h3>
+            <p>Clean, itemized invoices sent straight to your phone or inbox — no paper to lose.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <div>
+            <h3>Easy Scheduling</h3>
+            <p>Book a time that works for you in one call — no back-and-forth required.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 4.5-4 8-8 11z"/></svg>
+          </div>
+          <div>
+            <h3>Local Kern County Crews</h3>
+            <p>Real arborists who know Bakersfield's soil, trees, and weather.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="reviews-section" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Reviews</span>
+        <h2 id="reviews-heading">What Bakersfield Neighbors Are Saying</h2>
+        <p>Real feedback from real jobs around town.</p>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <span class="review-badge">Fast &amp; Easy</span>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="quote">"Called about a leaning oak in our backyard and an AI agent picked up instantly — no hold music, no voicemail. Had a crew out two days later and got a text an hour before they arrived."</p>
+          <div class="reviewer">
+            <div class="avatar">DM</div>
+            <div>
+              <div class="name">Danielle M.</div>
+              <div class="loc">Bakersfield, CA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="review-badge">Fast &amp; Easy</span>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="quote">"No more phone tag with tree companies. I scheduled my stump grinding in one call, got a text reminder the morning of, and paid the digital invoice from my phone. So easy."</p>
+          <div class="reviewer">
+            <div class="avatar">RT</div>
+            <div>
+              <div class="name">Ray T.</div>
+              <div class="loc">Oildale, CA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="review-badge">Fast &amp; Easy</span>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="quote">"We had storm damage after a windstorm and I expected to leave a voicemail like every other tree company. Instead their AI line answered right away and got us on the schedule same week."</p>
+          <div class="reviewer">
+            <div class="avatar">SP</div>
+            <div>
+              <div class="name">Sandra P.</div>
+              <div class="loc">Shafter, CA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="review-badge">Great Work</span>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="quote">"They took down two massive eucalyptus trees near our house without a single scratch on the fence or roof. Cleanup was spotless, you'd never know they were there."</p>
+          <div class="reviewer">
+            <div class="avatar">JH</div>
+            <div>
+              <div class="name">Jorge H.</div>
+              <div class="loc">Bakersfield, CA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="review-badge">Great Work</span>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="quote">"Excellent pruning job on our citrus trees — they clearly know what they're doing. Trees look healthier already and the crew was careful and professional the whole time."</p>
+          <div class="reviewer">
+            <div class="avatar">KL</div>
+            <div>
+              <div class="name">Karen L.</div>
+              <div class="loc">Tehachapi, CA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <span class="review-badge">Great Work</span>
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="quote">"Had a full lot cleared for a new build out near Wasco. Heavy equipment, tight timeline, and they still finished ahead of schedule with a clean, graded site."</p>
+          <div class="reviewer">
+            <div class="avatar">BC</div>
+            <div>
+              <div class="name">Brian C.</div>
+              <div class="loc">Wasco, CA</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="reviews-note">Reviews shown are for demonstration purposes only.</p>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section aria-labelledby="process-heading" style="background:var(--white);">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">How It Works</span>
+        <h2 id="process-heading">Simple, Start to Finish</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="num">1</div>
+          <h3>Call or Text</h3>
+          <p>Reach a real answer any time, day or night — no voicemail loop.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">2</div>
+          <h3>Free On-Site Quote</h3>
+          <p>We walk the property and give you a straight-up price, no surprises.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">3</div>
+          <h3>Scheduled Service</h3>
+          <p>Pick a date, get a text reminder before the crew rolls up.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">4</div>
+          <h3>Done &amp; Invoiced</h3>
+          <p>Clean job site, digital invoice sent straight to your phone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICE AREA ============ -->
+  <section class="area-section" aria-labelledby="area-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Where We Work</span>
+        <h2 id="area-heading">Proudly Serving Bakersfield &amp; Kern County</h2>
+        <p>If you're nearby, chances are we've already worked on your street.</p>
+      </div>
+      <ul class="area-list">
+        <li>Bakersfield</li>
+        <li>Oildale</li>
+        <li>Shafter</li>
+        <li>Wasco</li>
+        <li>Delano</li>
+        <li>Tehachapi</li>
+        <li>Arvin</li>
+        <li>Lamont</li>
+        <li>McFarland</li>
+        <li>Rosedale</li>
+      </ul>
+      <p class="area-map-note">Don't see your town listed? Give us a call — we cover most of Kern County.</p>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section id="gallery" aria-labelledby="gallery-heading" style="background:var(--white);">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Recent Work</span>
+        <h2 id="gallery-heading">Completed Jobs Around Bakersfield</h2>
+        <p>A few examples of work our crews have finished for local homeowners.</p>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="assets/gallery-1.webp" alt="Crane truck lifting cut logs during a large tree removal job" loading="lazy">
+          <figcaption class="gallery-caption">Large Tree Removal</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/gallery-2.jpg" alt="Climbing arborist limbing a tree from height" loading="lazy">
+          <figcaption class="gallery-caption">Tree Trimming &amp; Pruning</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/gallery-3.jpeg" alt="Bucket truck with extended boom used for tall tree work" loading="lazy">
+          <figcaption class="gallery-caption">Bucket Truck Canopy Work</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="assets/gallery-4.jpg" alt="Crew trimming palm trees near a residential roofline" loading="lazy">
+          <figcaption class="gallery-caption">Palm Tree Trimming</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / CTA ============ -->
+  <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+    <div class="container contact-grid">
+      <div>
+        <span class="section-label">Get In Touch</span>
+        <h2 id="contact-heading">Ready When You Are</h2>
+        <p style="color:#CFE0D5; max-width:480px;">Skip the voicemail. Call our AI line any time or send us your info and we'll follow up fast.</p>
+        <ul class="contact-info-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:17372496115">Try our Voice AI Agent: (737) 249-6115</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span id="cfg-email">info@sunrisetreeservice-demo.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span id="cfg-city">Bakersfield, CA &amp; Kern County</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>Mon–Sat, 7am–7pm &nbsp;|&nbsp; 24/7 Emergency Line</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('This is a mockup form for demo purposes — no data is submitted.');">
+        <h3>Request a Free Estimate</h3>
+        <p class="form-note">Demo form — for illustration only, does not submit anywhere.</p>
+        <label for="f-name">Name</label>
+        <input type="text" id="f-name" name="name" placeholder="Your name" required>
+        <label for="f-phone">Phone</label>
+        <input type="tel" id="f-phone" name="phone" placeholder="(661) 555-0100" required>
+        <label for="f-service">Service Needed</label>
+        <select id="f-service" name="service">
+          <option>Tree Removal</option>
+          <option>Tree Trimming &amp; Pruning</option>
+          <option>Stump Grinding</option>
+          <option>Emergency Storm Cleanup</option>
+          <option>Lot &amp; Land Clearing</option>
+          <option>Tree Planting</option>
+        </select>
+        <label for="f-notes">Notes</label>
+        <textarea id="f-notes" name="notes" placeholder="Tell us a bit about the job"></textarea>
+        <button type="submit" class="btn btn-accent">Request My Estimate</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-platform">
+    <img src="assets/lvlup-icon.svg" alt="LvL Up Media icon">
+    <span>Platform by LvL Up Media Group</span>
+  </div>
+  <p class="footer-copy">&copy; <span id="cfg-year"></span> <span id="cfg-company-footer">Sunrise Tree Service</span>. All content is for demonstration purposes only.</p>
+</footer>
+
+<script>
+  /* ============================================================
+     CONFIG — single source of truth for swappable site content.
+     Update these values and re-run render() logic below to
+     re-skin this mockup with real client details.
+     ============================================================ */
+  const CONFIG = {
+    companyName: "Sunrise Tree Service",
+    city: "Bakersfield, CA",
+    phoneDisplay: "(661) 555-0142",
+    phoneHref: "tel:+16615550142",
+    logoPath: "assets/logo.png",
+  };
+
+  document.getElementById('cfg-logo').src = CONFIG.logoPath;
+  document.getElementById('cfg-company-name').textContent = CONFIG.companyName;
+  document.getElementById('cfg-company-footer').textContent = CONFIG.companyName;
+  document.getElementById('cfg-year').textContent = new Date().getFullYear();
+
+  /* Mobile nav toggle */
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
